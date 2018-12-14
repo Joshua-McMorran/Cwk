@@ -152,7 +152,7 @@ public class WorkerTest {
 		
 		wareHouseWorker = new Worker( qOfCusts, seedList, 5, 4);
 		assertFalse(wareHouseWorker.getClosed());
-		wareHouseWorker.setClosed(false);
+		wareHouseWorker.setClosed(true);
 		assertTrue(wareHouseWorker.getClosed());
 
 	}
@@ -177,13 +177,13 @@ public class WorkerTest {
 		SeedMap seedList = new SeedMap();
 		Seed s = new Seed("lt64s", "Potato", "Square", 5, "Blue" );
 
-		Seed s2 = new Seed("ntqx", "Green Beans" , "Circle", 5, "Green");
+		Seed s2 = new Seed("px21", "Green Beans" , "Circle", 5, "Green");
 		seedList.addDetails(s);
 		seedList.addDetails(s2);
 
 		wareHouseWorker = new Worker( qOfCusts, seedList, 5, 4);
 
-
+ 
  		wareHouseWorker.processOneCustomer();
 
 		CustInQueue current = wareHouseWorker.getCurrentCust();

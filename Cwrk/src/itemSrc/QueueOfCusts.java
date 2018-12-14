@@ -8,8 +8,8 @@ public class QueueOfCusts
     // Storage for an arbitrary number of details.
     private LinkedList <CustInQueue> queue;
 
-
-    /**
+ 
+    /**      
      * initialising the list of customers
      */
     public QueueOfCusts() {
@@ -83,10 +83,11 @@ public class QueueOfCusts
     public  CustInQueue getNext() {
 
     	CustInQueue cq = null;
-    	if(queue.size() == 0) {
-    		//wait?
+    	if(queue.size() > 0) {
+    		cq = queue.getFirst();
+    		queue.removeFirst();
     	}
-    	cq = queue.getFirst();
+    	
     	return cq;
     }
 

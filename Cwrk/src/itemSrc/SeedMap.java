@@ -28,8 +28,7 @@ public class SeedMap {
 		return allSeeds.size(); 
 	}
 		
-	public boolean allGone() {
-	
+	public boolean allGone(){
 		for(Entry<String, Seed> entry : allSeeds.entrySet()) {
 			Seed seed = entry.getValue();
 			 if(seed.isCollected())
@@ -44,11 +43,22 @@ public class SeedMap {
 		return true;
 	}
 	
-	public String listDetails() {
+	public String listDetails(){
 		StringBuffer seedBuffer = new StringBuffer();
 		for(Entry<String, Seed> entry : allSeeds.entrySet())
 		{
-			seedBuffer.append(entry.getValue());
+			Seed seed = entry.getValue();
+			String id = seed.getId();
+			String type = seed.getType();
+			String shape = seed.getShape();
+			String colour = seed.getColour();
+			int weight = seed.getWeight();
+			
+			seedBuffer.append(id+ ",");
+			seedBuffer.append(type+ ",");
+			seedBuffer.append(shape+ ",");
+			seedBuffer.append(colour + ",");
+			seedBuffer.append(weight +  ",");
 		}
 		return seedBuffer.toString();
 	}
@@ -62,15 +72,14 @@ public class SeedMap {
 		for(Entry<String, Seed> entry:allSeeds.entrySet())
 		{
 			Seed seed = entry.getValue();
-			if(seed.isCollected() == false)
-			{
+			if(seed.isCollected() == false){
 				seedBuffer.append(seed);	
 			}	
 		}
 		return seedBuffer.toString();
 	}
 	
-	public Seed findSeed (String id) {
+	public Seed findSeed (String id){
 		for(Entry<String, Seed> entry : allSeeds.entrySet())
 		{
 			String key = entry.getKey();
