@@ -8,8 +8,9 @@ public class Seed implements Comparable <Seed> {
 	private int weight;
 	private boolean  collected = false;
 
-	public Seed( String t, String s, int w, String c)
+	public Seed( String id, String t, String s, int w, String c)
 	{ 
+		this.id = id;
 		this.type = t;
 		this.shape = s;
 		this.weight = w;

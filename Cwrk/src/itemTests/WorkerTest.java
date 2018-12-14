@@ -27,9 +27,9 @@ public class WorkerTest {
 		qOfCusts.addToQueue();
 
 		SeedMap seedList = new SeedMap();
-		Seed s = new Seed("lt64s", "Square", 5, "Blue");
+		Seed s = new Seed( "lt64s", "Potato", "Square", 5, "Blue");
 
-		Seed s2 = new Seed("ntqx", "Circle", 3, "Green");
+		Seed s2 = new Seed("ntqx", "Green Beans" , "Circle", 3, "Green");
 		seedList.addDetails(s);
 		seedList.addDetails(s2);
 		wareHouseWorker = new Worker( qOfCusts, seedList, 5, 4);
@@ -56,9 +56,9 @@ public class WorkerTest {
 		qOfCusts.addToQueue();
 
 		SeedMap seedList = new SeedMap();
-		Seed s = new Seed("lt64s", "Square", 5, "Blue");
+		Seed s = new Seed("lt64s", "Potato", "Square", 5, "Blue");
 
-		Seed s2 = new Seed("ntqx", "Circle", 3,"Green");
+		Seed s2 = new Seed("ntqx", "Green Beans" , "Circle", 3,"Green");
 		seedList.addDetails(s);
 		seedList.addDetails(s2);
 
@@ -85,9 +85,9 @@ public class WorkerTest {
 		qOfCusts.addToQueue();
 
 		SeedMap seedList = new SeedMap();
-		Seed s = new Seed("lt64s", "Square", 5, "Blue");
+		Seed s = new Seed("lt64s", "Potato", "Square", 5, "Blue");
 
-		Seed s2 = new Seed("ntqx", "Circle", 3,"Green");
+		Seed s2 = new Seed("ntqx", "Green Beans" ,"Circle", 3,"Green");
 		seedList.addDetails(s);
 		seedList.addDetails(s2);
 
@@ -111,9 +111,9 @@ public class WorkerTest {
 		qOfCusts.addToQueue();
 
 		SeedMap seedList = new SeedMap();
-		Seed s = new Seed("lt64s", "Square", 5, "Blue");
+		Seed s = new Seed("lt64s", "Potato", "Square", 5, "Blue");
 
-		Seed s2 = new Seed("ntqx", "Square", 6 ,"Green");
+		Seed s2 = new Seed("ntqx", "Green Beans" , "Square", 6 ,"Green");
 		seedList.addDetails(s);
 		seedList.addDetails(s2);
 
@@ -143,9 +143,9 @@ public class WorkerTest {
 		qOfCusts.addToQueue();
 
 		SeedMap seedList = new SeedMap();
-		Seed s = new Seed("lt64s", "Square", 5, "Blue");
+		Seed s = new Seed("lt64s", "Potato", "Square", 5, "Blue");
 
-		Seed s2 = new Seed("ntqx", "Square", 6 ,"Green");
+		Seed s2 = new Seed("ntqx", "Green Beans" , "Square", 6 ,"Green");
 		seedList.addDetails(s);
 		seedList.addDetails(s2);
 		
@@ -175,9 +175,9 @@ public class WorkerTest {
 		qOfCusts.addToQueue();
 
 		SeedMap seedList = new SeedMap();
-		Seed s = new Seed("lt64s", "Square", 5, "Blue" );
+		Seed s = new Seed("lt64s", "Potato", "Square", 5, "Blue" );
 
-		Seed s2 = new Seed("ntqx", "Circle", 5, "Green");
+		Seed s2 = new Seed("ntqx", "Green Beans" , "Circle", 5, "Green");
 		seedList.addDetails(s);
 		seedList.addDetails(s2);
 

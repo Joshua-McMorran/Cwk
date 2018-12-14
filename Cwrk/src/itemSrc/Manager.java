@@ -25,7 +25,7 @@ public class Manager
 	private Worker workers[];
 	private int numWorkers = 1; 
 	private QueueOfCusts custQ;
-    private SeedMap allParcels;
+    private SeedMap allSeeds;
 
    private int wSpeed [];
 
@@ -36,7 +36,7 @@ public class Manager
     public Manager()
     {
     	custQ = new  QueueOfCusts();
-    	allParcels = new SeedMap();
+    	allSeeds = new SeedMap();
     }
 
 
@@ -67,7 +67,7 @@ public class Manager
     		c.setInQueue(true);
     	}
 
-    	System.out.println(" parcel details"+allParcels.listDetails());
+    	System.out.println(" parcel details"+allSeeds.listDetails());
 
 
 
@@ -174,29 +174,18 @@ public class Manager
     	try {
 			String parts [] = inputLine.split(",");
 			String id = parts[0].trim();
-
-			//then the days
-			String dayString = parts[1].trim();
-			int days = Integer.parseInt(dayString);
-
-
-		    //then the dim
-			String lenString = parts[2].trim();
-			int l = Integer.parseInt(lenString);
-
-			String widString = parts[3].trim();
-			int w = Integer.parseInt(widString);
-
-			String heightString = parts[4].trim();
-			int h = Integer.parseInt(heightString);
-
-			String weightString = parts[5].trim();
+			String type = parts[1].trim();
+			String shape = parts[2].trim();
+			
+			String weightString = parts[3].trim();
 			int weight = Integer.parseInt(weightString);
+			
+			String colour = parts[4].trim();
 
 			//create  object and add to the list
-			Parcel p = new Parcel (id, days, l,h,w, weight);
+			Seed s = new Seed (id, type, shape, weight, colour);
     		//add to list
-            allParcels.addDetails(p);
+			allSeeds.addDetails(s);
 		}
 
 			//  ignore lines in error and try and carry on
