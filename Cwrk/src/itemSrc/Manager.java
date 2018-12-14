@@ -59,7 +59,7 @@ public class Manager
     	// to remove
     	readCustFile();
 
-    	readParcelFile();
+    	readSeedsFile();
 
     	//put 10 customers in the queue
     	for (int i = 0; i < 10; i++ ) {
@@ -67,7 +67,7 @@ public class Manager
     		c.setInQueue(true);
     	}
 
-    	System.out.println(" parcel details"+allSeeds.listDetails());
+    	System.out.println(" seeds details"+allSeeds.listDetails());
 
 
 
@@ -145,9 +145,9 @@ public class Manager
      * similar functionality as readcustomer file
      * follow same concept
      */
-    public void readParcelFile() {
+    public void readSeedsFile() {
     	try {
-    		Scanner scanner = new Scanner (new File("Parcels.csv"));
+    		Scanner scanner = new Scanner (new File("Seeds.csv"));
     		System.out.println("Scanning");
         	while(scanner.hasNext()){
             	String inputLine = scanner.nextLine();

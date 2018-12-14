@@ -22,7 +22,8 @@ public class ManagerTest {
 
 	@Test
 	public void testInitialiseData() {
-		
+		Manager manager = new Manager();
+		manager.initialiseData();
 	}
 
 	@Test 
