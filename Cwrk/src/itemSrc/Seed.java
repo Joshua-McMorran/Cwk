@@ -21,7 +21,6 @@ public class Seed implements Comparable <Seed> {
 	}
 	public void setId(String id) {
 		this.id = id;
-
 	}
 	public String getType() {
 		return type;

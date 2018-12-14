@@ -106,10 +106,10 @@ public class Worker   {
 
 
 			String pid = currentCust.getpId();
-			Parcel p = allParcels.findParcel(pid);
-			allParcels.setCollected(p);
-			System.out.println (pid + p);
-		    if (allParcels.allGone() ) {
+			Seed s = allSeeds.findSeed(pid);
+			allSeeds.setCollected(s);
+			System.out.println (pid + s);
+		    if (allSeeds.allGone() ) {
 				finished = true;
 			}
 
