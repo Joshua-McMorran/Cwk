@@ -1,4 +1,5 @@
 package itemSrc;
+import java.util.Map.Entry;
 import java.util.TreeMap;
 
 public class SeedMap {
@@ -27,8 +28,57 @@ public class SeedMap {
 		return allSeeds.size(); 
 	}
 		
-	/**public boolean allGone() {
-		
-	}**/
-
+	public boolean allGone() {
+	
+		for(Entry<String, Seed> entry : allSeeds.entrySet()) {
+			Seed seed = entry.getValue();
+			 if(seed.isCollected())
+			 {
+				 continue;
+			 }
+			 else
+			 {
+				 return false;
+			 }
+		}
+		return true;
+	}
+	
+	public String listDetails() {
+		StringBuffer seedBuffer = new StringBuffer();
+		for(Entry<String, Seed> entry : allSeeds.entrySet())
+		{
+			seedBuffer.append(entry.getValue());
+		}
+		return seedBuffer.toString();
+	}
+	
+	public void setCollected(Seed s){
+		s.setCollected(true);
+	}
+	
+	public String listUncollected() {
+		StringBuffer seedBuffer = new StringBuffer();
+		for(Entry<String, Seed> entry:allSeeds.entrySet())
+		{
+			Seed seed = entry.getValue();
+			if(seed.isCollected() == false)
+			{
+				seedBuffer.append(seed);	
+			}	
+		}
+		return seedBuffer.toString();
+	}
+	
+	public Seed findSeed (String id) {
+		for(Entry<String, Seed> entry : allSeeds.entrySet())
+		{
+			String key = entry.getKey();
+			if(id == key) 
+			{
+				return entry.getValue();
+			}
+		}
+		return null;
+	}
 }
