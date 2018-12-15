@@ -7,7 +7,7 @@ import org.junit.Test;
 import itemSrc.*;
 
 
-public class ManagerTest { 
+public class ManagerTest {
 	
 /**
  * The Manager class is fully implemented 
