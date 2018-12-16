@@ -13,7 +13,7 @@ public class Seed implements Comparable <Seed> {
 		this.id = id;
 		this.type = t;
 		this.shape = s;
-		this.weight = w;
+		this.weight = w; 
 		this.colour = c;
 
 	}
